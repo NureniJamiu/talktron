@@ -73,11 +73,13 @@ const handleSubmit = async (e) => {
 
   const messageDiv = document.getElementById(uniqueId);
 
+  const API = "https://talktron.onrender.com/";
+
   loader(messageDiv);
 
   // fetch data from server -> bot's response
 
-  const response = await fetch("http://localhost:5000", {
+  const response = await fetch(API, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
